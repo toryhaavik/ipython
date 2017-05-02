@@ -74,6 +74,11 @@ class BasicMagics(Magics):
     These are various magics that don't fit into specific categories but that
     are all part of the base 'IPython experience'."""
 
+    @skip_doctest
+    @line_magic
+    def e(self, parameter_s=''):
+        return '2.7'
+
     @magic_arguments.magic_arguments()
     @magic_arguments.argument(
         '-l', '--line', action='store_true',
